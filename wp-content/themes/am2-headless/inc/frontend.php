@@ -7,5 +7,5 @@
 
 function get_frontend_link() {
     //TODO: Pull from ACF Settings
-    return 'http://localhost:3000';
+    return '*'; // http://localhost:3000
 }

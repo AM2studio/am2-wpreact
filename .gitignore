@@ -1,7 +1,8 @@
 node_modules/
-react/node_modules/
-react/.DS_Store
-react/dist/
+front/node_modules/
+front/.next/
+front/.DS_Store
+front/dist/
 wp-admin/
 wp-includes/
 wp-content/*
