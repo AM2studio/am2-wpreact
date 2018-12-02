@@ -1,1 +1,1 @@
-export const Config = { apiUrl: 'https://myzonedev.com/headless/api/v1/' };
+export const Config = { apiUrl: 'https://blog.greenrush.com/wp-json/wp/v2/' };

@@ -1,31 +1,34 @@
-import React, { Components } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import Link from '../utils/prefetchData';
 
 const Nav = props => {
+    const { key, slug, title, content, preload } = props;
     return (
-        <article className="post type-post status-publish format-standard">
+        <article key={key} className="post type-post status-publish format-standard">
             <header className="entry-header">
                 <h1 className="entry-title">
-                    {props.slug ? (
-                        <Link href={`/post?slug=${props.slug}`} as={`/post/${props.slug}`}>
-                            <a rel="bookmark">{props.title}</a>
+                    {slug ? (
+                        <Link
+                            prefetch={preload}
+                            withData={preload}
+                            href={`/post?slug=${slug}`}
+                            as={`/post/${slug}`}
+                        >
+                            {title}
                         </Link>
                     ) : (
-                        <span rel="bookmark">{props.title}</span>
+                        <span rel="bookmark">{title}</span>
                     )}
                 </h1>
             </header>
-            <div className="entry-content" dangerouslySetInnerHTML={{ __html: props.content }} />
+            <div className="entry-content" dangerouslySetInnerHTML={{ __html: content }} />
 
             <footer className="entry-meta">
                 This entry was posted in{' '}
                 <a href="#" rel="category">
                     Uncategorized
                 </a>{' '}
-                on{' '}
-                <a href="#" title="10:40 pm" rel="bookmark">
-                    <time className="entry-date">June 4, 2008</time>
-                </a>
+                on <time className="entry-date">June 4, 2008</time>
                 <span className="by-author">
                     {' '}
                     by{' '}

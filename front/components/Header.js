@@ -19,7 +19,7 @@ class Header extends Component {
                     </h1>
                     <h2 className="site-description">Opis</h2>
                 </hgroup>
-                <Nav menus={menus} />
+                {menus ? <Nav menus={menus} /> : ''}
             </header>
         );
     }
