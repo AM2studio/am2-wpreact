@@ -4,10 +4,11 @@
     "description": "WP + React + Next.js",
     "main": "index.js",
     "scripts": {
-        "dev": "node server.js",
+        "dev": "node server.js -p $PORT",
         "build": "next build",
-        "start": "NODE_ENV=production node server.js"
-    },
+        "heroku-postbuild": "next build",
+        "start": "node server.js -p $PORT"
+      },
     "author": "",
     "license": "ISC",
     "dependencies": {
